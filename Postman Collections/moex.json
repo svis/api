@@ -148,14 +148,12 @@
 							],
 							"variable": [
 								{
-									"id": "fe1020df-b197-4cb4-acd0-3902801092d9",
 									"key": "engine",
-									"value": "stock"
+									"value": "futures"
 								},
 								{
-									"id": "84ccda57-61b7-495e-8819-6e5f443253b1",
 									"key": "market",
-									"value": "shares"
+									"value": "forts"
 								}
 							]
 						}
