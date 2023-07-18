@@ -24,7 +24,7 @@
 					"response": []
 				},
 				{
-					"name": "groups / Группы ценных бумаг",
+					"name": "security groups / Группы ценных бумаг",
 					"id": "393913b9-ddd0-4427-b71d-5cab2c9b98ec",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
