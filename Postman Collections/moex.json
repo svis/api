@@ -113,9 +113,8 @@
 							],
 							"variable": [
 								{
-									"id": "a16761e0-98e3-4145-bfdf-abca3db5bc75",
 									"key": "engine",
-									"value": "stock"
+									"value": "futures"
 								}
 							]
 						}
