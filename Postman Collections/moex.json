@@ -1999,24 +1999,20 @@
 					],
 					"variable": [
 						{
-							"id": "db89b4a6-3226-477f-9bac-62db9d8c6b6b",
 							"key": "engine",
-							"value": "stock"
+							"value": "futures"
 						},
 						{
-							"id": "e837431e-00c0-49dc-8558-477f1fea56dd",
 							"key": "market",
-							"value": "shares"
+							"value": "forts"
 						},
 						{
-							"id": "67cb7faf-9b10-454e-bc79-b2dabdecdcbc",
 							"key": "board",
-							"value": "TQBR"
+							"value": "RUFD"
 						},
 						{
-							"id": "66dc55cc-eda8-4759-88b6-73705772aa6d",
 							"key": "secid",
-							"value": "VTBR"
+							"value": "SiU3"
 						}
 					]
 				}
