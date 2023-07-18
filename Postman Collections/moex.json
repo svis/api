@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "c7f2e5db-cf00-4f16-b502-239f2a6e949f",
 		"name": "ISS MOEX API",
-		"description": "Работа с API MOEX (Мосбиржи)",
+		"description": "Работа с API MOEX (Мосбиржи) [https://www.moex.com/a2193]()",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
