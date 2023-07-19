@@ -2477,19 +2477,16 @@
 					],
 					"variable": [
 						{
-							"id": "6e4ccf65-cbc8-470d-ae8c-7021bf7336c3",
 							"key": "engine",
-							"value": "stock"
+							"value": "futures"
 						},
 						{
-							"id": "1eff933f-7cf4-4655-aaf4-ad969d118ccf",
 							"key": "market",
-							"value": "bonds"
+							"value": "forts"
 						},
 						{
-							"id": "632aceee-b8cc-4295-8005-38fbfc2bdaa5",
 							"key": "secid",
-							"value": "RU000A0ZYA66"
+							"value": "NGQ3"
 						}
 					]
 				},
