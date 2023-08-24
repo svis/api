@@ -1347,6 +1347,691 @@
 			]
 		},
 		{
+			"name": "Список фьючерсов торгуемых на московской бирже",
+			"id": "b0e17545-d696-449c-900f-6e57eeb1104d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iss.moex.com/iss/securities.json?q=ВТБ&group_by=group&group_by_filter=stock_bonds&limit=10000&iss.meta=off&start=0&iss.json=extended",
+					"protocol": "https",
+					"host": [
+						"iss",
+						"moex",
+						"com"
+					],
+					"path": [
+						"iss",
+						"securities.json"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "ВТБ",
+							"description": "! Поиск инструмента по части Кода, Названию, ISIN, Идентификатору Эмитента, Номеру гос.регистрации. Слова длиной менее трёх букв игнорируются. Если параметром передано два слова через пробел. То каждое должно быть длиной не менее трёх букв."
+						},
+						{
+							"key": "lang",
+							"value": "en",
+							"description": "ru или en",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "engine",
+							"value": "stock",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "is_trading",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "market",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "group_by",
+							"value": "group",
+							"description": "type, group"
+						},
+						{
+							"key": "group_by_filter",
+							"value": "stock_bonds",
+							"description": "stock_bonds  corporate_bond common_share"
+						},
+						{
+							"key": "limit",
+							"value": "10000"
+						},
+						{
+							"key": "securities.columns",
+							"value": "secid,name",
+							"disabled": true
+						},
+						{
+							"key": "securities.columns",
+							"value": "secid,shortname,type",
+							"disabled": true
+						},
+						{
+							"key": "iss.meta",
+							"value": "off"
+						},
+						{
+							"key": "start",
+							"value": "0"
+						},
+						{
+							"key": "iss.json",
+							"value": "extended",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Список бумаг торгуемых на московской бирже.\n\n/iss/securities  \n[https://iss.moex.com/iss/reference/5](https://iss.moex.com/iss/reference/5)\n\n[https://iss.moex.com/iss/reference/5](https://iss.moex.com/iss/reference/5)"
+			},
+			"response": [
+				{
+					"id": "19af5d56-f914-4466-8933-020ab20d5328",
+					"name": "ОФЗ",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://iss.moex.com/iss/securities.xml?q=SU26&group_by=type&group_by_filter=ofz_bond&limit=10&start=0&securities.columns=secid,shortname,type",
+							"protocol": "https",
+							"host": [
+								"iss",
+								"moex",
+								"com"
+							],
+							"path": [
+								"iss",
+								"securities.xml"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "SU26",
+									"description": "Поиск инструмента по части Кода, Названию, ISIN, Идентификатору Эмитента, Номеру гос.регистрации. Слова длиной менее трёх букв игнорируются. Если параметром передано два слова через пробел. То каждое должно быть длиной не менее трёх букв."
+								},
+								{
+									"key": "lang",
+									"value": "en",
+									"description": "ru или en",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "engine",
+									"value": "stock",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "is_trading",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "market",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "group_by",
+									"value": "type",
+									"description": "type, group"
+								},
+								{
+									"key": "group_by_filter",
+									"value": "ofz_bond",
+									"description": "stock_bonds  corporate_bond"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "securities.columns",
+									"value": "secid,shortname,type",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Nov 2021 19:39:10 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/xml; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-ISS-Profiling",
+							"value": "url_parsing: 4.936000; queries_get: 0.000000, processing: 4.924000; lua: 4.908000"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=5"
+						},
+						{
+							"key": "Expires",
+							"value": "Fri, 19 Nov 2021 19:39:15 GMT"
+						},
+						{
+							"key": "X-MicexCacheTime",
+							"value": "5"
+						},
+						{
+							"key": "X-MicexPassport-Marker",
+							"value": "granted"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "X-MicexPassport-Marker"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Request-ID",
+							"value": "315273a26add084d298ed8fca1dd83b9"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<document>\n    <data id=\"securities\">\n        <metadata>\n            <columns>\n                <column name=\"id\" type=\"int32\" />\n                <column name=\"secid\" type=\"string\" bytes=\"36\" max_size=\"0\" />\n                <column name=\"shortname\" type=\"string\" bytes=\"189\" max_size=\"0\" />\n                <column name=\"regnumber\" type=\"string\" bytes=\"189\" max_size=\"0\" />\n                <column name=\"name\" type=\"string\" bytes=\"765\" max_size=\"0\" />\n                <column name=\"isin\" type=\"string\" bytes=\"765\" max_size=\"0\" />\n                <column name=\"is_traded\" type=\"int32\" />\n                <column name=\"emitent_id\" type=\"int32\" />\n                <column name=\"emitent_title\" type=\"string\" bytes=\"765\" max_size=\"0\" />\n                <column name=\"emitent_inn\" type=\"string\" bytes=\"30\" max_size=\"0\" />\n                <column name=\"emitent_okpo\" type=\"string\" bytes=\"24\" max_size=\"0\" />\n                <column name=\"gosreg\" type=\"string\" bytes=\"189\" max_size=\"0\" />\n                <column name=\"type\" type=\"string\" bytes=\"93\" max_size=\"0\" />\n                <column name=\"group\" type=\"string\" bytes=\"93\" max_size=\"0\" />\n                <column name=\"primary_boardid\" type=\"string\" bytes=\"12\" max_size=\"0\" />\n                <column name=\"marketprice_boardid\" type=\"string\" bytes=\"12\" max_size=\"0\" />\n            </columns>\n        </metadata>\n        <rows>\n            <row id=\"14624\" secid=\"SU26209RMFS5\" shortname=\"ОФЗ 26209\" regnumber=\"26209RMFS\" name=\"ОФЗ-ПД 26209 20/07/22\" isin=\"RU000A0JSMA2\" is_traded=\"1\" emitent_id=\"1374788\" emitent_title=\"Министерство финансов Российской Федерации\" emitent_inn=\"7710168360\" emitent_okpo=\"\" gosreg=\"26209RMFS\" type=\"ofz_bond\" group=\"stock_bonds\" primary_boardid=\"TQOB\" marketprice_boardid=\"TQOB\" />\n            <row id=\"18929\" secid=\"SU26211RMFS1\" shortname=\"ОФЗ 26211\" regnumber=\"26211RMFS\" name=\"ОФЗ-ПД 26211 25/01/23\" isin=\"RU000A0JTJL3\" is_traded=\"1\" emitent_id=\"1374788\" emitent_title=\"Министерство финансов Российской Федерации\" emitent_inn=\"7710168360\" emitent_okpo=\"\" gosreg=\"26211RMFS\" type=\"ofz_bond\" group=\"stock_bonds\" primary_boardid=\"TQOB\" marketprice_boardid=\"TQOB\" />\n            <row id=\"147278\" secid=\"SU26223RMFS6\" shortname=\"ОФЗ 26223\" regnumber=\"26223RMFS\" name=\"ОФЗ-ПД 26223 28/02/24\" isin=\"RU000A0ZYU88\" is_traded=\"1\" emitent_id=\"1374788\" emitent_title=\"Министерство финансов Российской Федерации\" emitent_inn=\"7710168360\" emitent_okpo=\"\" gosreg=\"26223RMFS\" type=\"ofz_bond\" group=\"stock_bonds\" primary_boardid=\"TQOB\" marketprice_boardid=\"TQOB\" />\n            <row id=\"382786891\" secid=\"SU26233RMFS5\" shortname=\"ОФЗ 26233\" regnumber=\"26233RMFS\" name=\"ОФЗ-ПД 26233 18/07/2035\" isin=\"RU000A101F94\" is_traded=\"1\" emitent_id=\"1374788\" emitent_title=\"Министерство финансов Российской Федерации\" emitent_inn=\"7710168360\" emitent_okpo=\"\" gosreg=\"26233RMFS\" type=\"ofz_bond\" group=\"stock_bonds\" primary_boardid=\"TQOB\" marketprice_boardid=\"TQOB\" />\n            <row id=\"44942926\" secid=\"SU26227RMFS7\" shortname=\"ОФЗ 26227\" regnumber=\"26227RMFS\" name=\"ОФЗ-ПД 26227 17/07/24\" isin=\"RU000A1007F4\" is_traded=\"1\" emitent_id=\"1374788\" emitent_title=\"Министерство финансов Российской Федерации\" emitent_inn=\"7710168360\" emitent_okpo=\"\" gosreg=\"26227RMFS\" type=\"ofz_bond\" group=\"stock_bonds\" primary_boardid=\"TQOB\" marketprice_boardid=\"TQOB\" />\n            <row id=\"127213\" secid=\"SU26222RMFS8\" shortname=\"ОФЗ 26222\" regnumber=\"26222RMFS\" name=\"ОФЗ-ПД 26222 16/10/24\" isin=\"RU000A0JXQF2\" is_traded=\"1\" emitent_id=\"1374788\" emitent_title=\"Министерство финансов Российской Федерации\" emitent_inn=\"7710168360\" emitent_okpo=\"\" gosreg=\"26222RMFS\" type=\"ofz_bond\" group=\"stock_bonds\" primary_boardid=\"TQOB\" marketprice_boardid=\"TQOB\" />\n            <row id=\"121186\" secid=\"SU26220RMFS2\" shortname=\"ОФЗ 26220\" regnumber=\"26220RMFS\" name=\"ОФЗ-ПД 26220 07/12/22\" isin=\"RU000A0JXB41\" is_traded=\"1\" emitent_id=\"1374788\" emitent_title=\"Министерство финансов Российской Федерации\" emitent_inn=\"7710168360\" emitent_okpo=\"\" gosreg=\"26220RMFS\" type=\"ofz_bond\" group=\"stock_bonds\" primary_boardid=\"TQOB\" marketprice_boardid=\"TQOB\" />\n            <row id=\"11113\" secid=\"SU26207RMFS9\" shortname=\"ОФЗ 26207\" regnumber=\"26207RMFS\" name=\"ОФЗ-ПД 26207 03/02/27\" isin=\"RU000A0JS3W6\" is_traded=\"1\" emitent_id=\"1374788\" emitent_title=\"Министерство финансов Российской Федерации\" emitent_inn=\"7710168360\" emitent_okpo=\"\" gosreg=\"26207RMFS\" type=\"ofz_bond\" group=\"stock_bonds\" primary_boardid=\"TQOB\" marketprice_boardid=\"TQOB\" />\n            <row id=\"26480\" secid=\"SU26215RMFS2\" shortname=\"ОФЗ 26215\" regnumber=\"26215RMFS\" name=\"ОФЗ-ПД 26215 16/08/23\" isin=\"RU000A0JU4L3\" is_traded=\"1\" emitent_id=\"1374788\" emitent_title=\"Министерство финансов Российской Федерации\" emitent_inn=\"7710168360\" emitent_okpo=\"\" gosreg=\"26215RMFS\" type=\"ofz_bond\" group=\"stock_bonds\" primary_boardid=\"TQOB\" marketprice_boardid=\"TQOB\" />\n            <row id=\"77189865\" secid=\"SU26230RMFS1\" shortname=\"ОФЗ 26230\" regnumber=\"26230RMFS\" name=\"ОФЗ-ПД 26230 16/03/39\" isin=\"RU000A100EF5\" is_traded=\"1\" emitent_id=\"1374788\" emitent_title=\"Министерство финансов Российской Федерации\" emitent_inn=\"7710168360\" emitent_okpo=\"\" gosreg=\"26230RMFS\" type=\"ofz_bond\" group=\"stock_bonds\" primary_boardid=\"TQOB\" marketprice_boardid=\"TQOB\" />\n        </rows>\n    </data>\n</document>"
+				},
+				{
+					"id": "7edcc2bb-a9b0-4a55-a7f5-35fc2413d4e2",
+					"name": "Корп облиги",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://iss.moex.com/iss/securities.xml?q=втб&group_by=type&group_by_filter=corporate_bond&limit=10&start=0",
+							"protocol": "https",
+							"host": [
+								"iss",
+								"moex",
+								"com"
+							],
+							"path": [
+								"iss",
+								"securities.xml"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "втб",
+									"description": "Поиск инструмента по части Кода, Названию, ISIN, Идентификатору Эмитента, Номеру гос.регистрации. Слова длиной менее трёх букв игнорируются. Если параметром передано два слова через пробел. То каждое должно быть длиной не менее трёх букв."
+								},
+								{
+									"key": "lang",
+									"value": "en",
+									"description": "ru или en",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "engine",
+									"value": "stock",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "is_trading",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "market",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "group_by",
+									"value": "type",
+									"description": "type, group"
+								},
+								{
+									"key": "group_by_filter",
+									"value": "corporate_bond",
+									"description": "stock_bonds  corporate_bond"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "start",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Nov 2021 19:40:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/xml; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-ISS-Profiling",
+							"value": "url_parsing: 2.823000; queries_get: 0.000000, processing: 2.814000; lua: 2.800000"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=5"
+						},
+						{
+							"key": "Expires",
+							"value": "Fri, 19 Nov 2021 19:40:58 GMT"
+						},
+						{
+							"key": "X-MicexCacheTime",
+							"value": "5"
+						},
+						{
+							"key": "X-MicexPassport-Marker",
+							"value": "granted"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "X-MicexPassport-Marker"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Request-ID",
+							"value": "3ba980407c863aaa08f2aa5501e96821"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<document>\n    <data id=\"securities\">\n        <metadata>\n            <columns>\n                <column name=\"id\" type=\"int32\" />\n                <column name=\"secid\" type=\"string\" bytes=\"36\" max_size=\"0\" />\n                <column name=\"shortname\" type=\"string\" bytes=\"189\" max_size=\"0\" />\n                <column name=\"regnumber\" type=\"string\" bytes=\"189\" max_size=\"0\" />\n                <column name=\"name\" type=\"string\" bytes=\"765\" max_size=\"0\" />\n                <column name=\"isin\" type=\"string\" bytes=\"765\" max_size=\"0\" />\n                <column name=\"is_traded\" type=\"int32\" />\n                <column name=\"emitent_id\" type=\"int32\" />\n                <column name=\"emitent_title\" type=\"string\" bytes=\"765\" max_size=\"0\" />\n                <column name=\"emitent_inn\" type=\"string\" bytes=\"30\" max_size=\"0\" />\n                <column name=\"emitent_okpo\" type=\"string\" bytes=\"24\" max_size=\"0\" />\n                <column name=\"gosreg\" type=\"string\" bytes=\"189\" max_size=\"0\" />\n                <column name=\"type\" type=\"string\" bytes=\"93\" max_size=\"0\" />\n                <column name=\"group\" type=\"string\" bytes=\"93\" max_size=\"0\" />\n                <column name=\"primary_boardid\" type=\"string\" bytes=\"12\" max_size=\"0\" />\n                <column name=\"marketprice_boardid\" type=\"string\" bytes=\"12\" max_size=\"0\" />\n            </columns>\n        </metadata>\n        <rows>\n            <row id=\"413737789\" secid=\"RU000A1032P1\" shortname=\"ВТБРКС01\" regnumber=\"4-01-00586-R\" name=\"ООО «СФО ВТБ РКС-1 »\" isin=\"RU000A1032P1\" is_traded=\"1\" emitent_id=\"1375599\" emitent_title=\"Общество с ограниченной ответственностью &quot;Специализированное финансовое общество ВТБ РКС-1&quot;\" emitent_inn=\"9704018755\" emitent_okpo=\"\" gosreg=\"4-01-00586-R\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"78195\" secid=\"XS0810596832\" shortname=\"VTB Eur\" regnumber=\"\" name=\"VTB Eurasia DAC 9.5\" isin=\"XS0810596832\" is_traded=\"1\" emitent_id=\"266499\" emitent_title=\"ВТБ Евразия ДиЭйСи (VTB Eurasia DAC)\" emitent_inn=\"0000511693\" emitent_okpo=\"\" gosreg=\"\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQOD\" marketprice_boardid=\"TQOD\" />\n            <row id=\"414705025\" secid=\"RU000A103SC6\" shortname=\"ВТБСУБ1-12\" regnumber=\"4-12-01000-B-001P\" name=\"Банк ВТБ ПАО СУБ-Т1-12\" isin=\"RU000A103SC6\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4-12-01000-B-001P\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414705023\" secid=\"RU000A103SB8\" shortname=\"ВТБСУБ1-11\" regnumber=\"4-11-01000-B-001P\" name=\"Банк ВТБ ПАО СУБ-Т1-11\" isin=\"RU000A103SB8\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4-11-01000-B-001P\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"413626957\" secid=\"RU000A1034P7\" shortname=\"ВТБСУБТ1-5\" regnumber=\"4-05-01000-B-001P\" name=\"Банк ВТБ ПАО СУБ-Т1-5\" isin=\"RU000A1034P7\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4-05-01000-B-001P\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"412855435\" secid=\"RU000A102QJ7\" shortname=\"ВТБСУБТ1-1\" regnumber=\"4-01-01000-B-001P\" name=\"Банк ВТБ ПАО СУБ-Т1-1\" isin=\"RU000A102QJ7\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4-01-01000-B-001P\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414705017\" secid=\"RU000A103S89\" shortname=\"ВТБСУБ1-8\" regnumber=\"4-08-01000-B-001P\" name=\"Банк ВТБ ПАО СУБ-Т1-8\" isin=\"RU000A103S89\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4-08-01000-B-001P\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414705019\" secid=\"RU000A103S97\" shortname=\"ВТБСУБ1-9\" regnumber=\"4-09-01000-B-001P\" name=\"Банк ВТБ ПАО СУБ-Т1-9\" isin=\"RU000A103S97\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4-09-01000-B-001P\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"412110643\" secid=\"RU000A102879\" shortname=\"ВТБСУБТ2-1\" regnumber=\"4-01-01000-B-002P\" name=\"Банк ВТБ ПАО СУБ-Т2-1\" isin=\"RU000A102879\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4-01-01000-B-002P\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414705021\" secid=\"RU000A103SA0\" shortname=\"ВТБСУБ1-10\" regnumber=\"4-10-01000-B-001P\" name=\"Банк ВТБ ПАО СУБ-Т1-10\" isin=\"RU000A103SA0\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4-10-01000-B-001P\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n        </rows>\n    </data>\n</document>"
+				},
+				{
+					"id": "926c86ce-2794-45ff-b630-1bd8dd3c9fa9",
+					"name": "Поиск по тикеру",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://iss.moex.com/iss/securities.xml?q=AAPL&limit=10&start=0",
+							"protocol": "https",
+							"host": [
+								"iss",
+								"moex",
+								"com"
+							],
+							"path": [
+								"iss",
+								"securities.xml"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "AAPL",
+									"description": "! Поиск инструмента по части Кода, Названию, ISIN, Идентификатору Эмитента, Номеру гос.регистрации. Слова длиной менее трёх букв игнорируются. Если параметром передано два слова через пробел. То каждое должно быть длиной не менее трёх букв."
+								},
+								{
+									"key": "lang",
+									"value": "en",
+									"description": "ru или en",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "engine",
+									"value": "stock",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "is_trading",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "market",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "group_by",
+									"value": "type",
+									"description": "type, group",
+									"disabled": true
+								},
+								{
+									"key": "group_by_filter",
+									"value": "corporate_bond",
+									"description": "stock_bonds  corporate_bond",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "start",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Nov 2021 19:47:43 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/xml; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-ISS-Profiling",
+							"value": "url_parsing: 2.699000; queries_get: 0.000000, processing: 2.690000; lua: 2.678000"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=5"
+						},
+						{
+							"key": "Expires",
+							"value": "Fri, 19 Nov 2021 19:47:48 GMT"
+						},
+						{
+							"key": "X-MicexCacheTime",
+							"value": "5"
+						},
+						{
+							"key": "X-MicexPassport-Marker",
+							"value": "granted"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "X-MicexPassport-Marker"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Request-ID",
+							"value": "5d428e1312ee162fee76f97fd3b284f5"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<document>\n    <data id=\"securities\">\n        <metadata>\n            <columns>\n                <column name=\"id\" type=\"int32\" />\n                <column name=\"secid\" type=\"string\" bytes=\"36\" max_size=\"0\" />\n                <column name=\"shortname\" type=\"string\" bytes=\"189\" max_size=\"0\" />\n                <column name=\"regnumber\" type=\"string\" bytes=\"189\" max_size=\"0\" />\n                <column name=\"name\" type=\"string\" bytes=\"765\" max_size=\"0\" />\n                <column name=\"isin\" type=\"string\" bytes=\"765\" max_size=\"0\" />\n                <column name=\"is_traded\" type=\"int32\" />\n                <column name=\"emitent_id\" type=\"int32\" />\n                <column name=\"emitent_title\" type=\"string\" bytes=\"765\" max_size=\"0\" />\n                <column name=\"emitent_inn\" type=\"string\" bytes=\"30\" max_size=\"0\" />\n                <column name=\"emitent_okpo\" type=\"string\" bytes=\"24\" max_size=\"0\" />\n                <column name=\"gosreg\" type=\"string\" bytes=\"189\" max_size=\"0\" />\n                <column name=\"type\" type=\"string\" bytes=\"93\" max_size=\"0\" />\n                <column name=\"group\" type=\"string\" bytes=\"93\" max_size=\"0\" />\n                <column name=\"primary_boardid\" type=\"string\" bytes=\"12\" max_size=\"0\" />\n                <column name=\"marketprice_boardid\" type=\"string\" bytes=\"12\" max_size=\"0\" />\n            </columns>\n        </metadata>\n        <rows>\n            <row id=\"411886643\" secid=\"AAPL-RM\" shortname=\"Apple\" regnumber=\"\" name=\"Apple Inc.\" isin=\"US0378331005\" is_traded=\"1\" emitent_id=\"1281003\" emitent_title=\"Apple Inc\" emitent_inn=\"\" emitent_okpo=\"\" gosreg=\"\" type=\"common_share\" group=\"stock_shares\" primary_boardid=\"FQBR\" marketprice_boardid=\"FQBR\" />\n            <row id=\"154676\" secid=\"AAPL\" shortname=\"Apple\" regnumber=\"\" name=\"Apple Inc.\" isin=\"US0378331005\" is_traded=\"0\" emitent_id=\"1281003\" emitent_title=\"Apple Inc\" emitent_inn=\"\" emitent_okpo=\"\" gosreg=\"\" type=\"common_share\" group=\"stock_shares\" primary_boardid=\"SOTC\" marketprice_boardid=\"\" />\n        </rows>\n    </data>\n</document>"
+				},
+				{
+					"id": "95f3f3be-7405-45fd-9462-a5dbebbf7202",
+					"name": "Все бонды (по группе)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://iss.moex.com/iss/securities.xml?q=ВТБ&group_by=group&group_by_filter=stock_bonds&limit=100&start=0",
+							"protocol": "https",
+							"host": [
+								"iss",
+								"moex",
+								"com"
+							],
+							"path": [
+								"iss",
+								"securities.xml"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "ВТБ",
+									"description": "! Поиск инструмента по части Кода, Названию, ISIN, Идентификатору Эмитента, Номеру гос.регистрации. Слова длиной менее трёх букв игнорируются. Если параметром передано два слова через пробел. То каждое должно быть длиной не менее трёх букв."
+								},
+								{
+									"key": "lang",
+									"value": "en",
+									"description": "ru или en",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "engine",
+									"value": "stock",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "is_trading",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "market",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "group_by",
+									"value": "group",
+									"description": "type, group"
+								},
+								{
+									"key": "group_by_filter",
+									"value": "stock_bonds",
+									"description": "stock_bonds  corporate_bond common_share"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								},
+								{
+									"key": "start",
+									"value": "0"
+								},
+								{
+									"key": "securities.columns",
+									"value": "secid,shortname,type",
+									"disabled": true
+								},
+								{
+									"key": "iss.meta",
+									"value": "off",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 Nov 2021 10:35:18 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/xml; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-ISS-Profiling",
+							"value": "url_parsing: 4.101000; queries_get: 0.000000, processing: 4.093000; lua: 4.080000"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=5"
+						},
+						{
+							"key": "Expires",
+							"value": "Wed, 24 Nov 2021 10:35:23 GMT"
+						},
+						{
+							"key": "X-MicexCacheTime",
+							"value": "5"
+						},
+						{
+							"key": "X-MicexPassport-Marker",
+							"value": "granted"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "X-MicexPassport-Marker"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Request-ID",
+							"value": "6269fa027130f0ad7502755a9c6716b9"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<document>\n    <data id=\"securities\">\n        <metadata>\n            <columns>\n                <column name=\"id\" type=\"int32\" />\n                <column name=\"secid\" type=\"string\" bytes=\"36\" max_size=\"0\" />\n                <column name=\"shortname\" type=\"string\" bytes=\"189\" max_size=\"0\" />\n                <column name=\"regnumber\" type=\"string\" bytes=\"189\" max_size=\"0\" />\n                <column name=\"name\" type=\"string\" bytes=\"765\" max_size=\"0\" />\n                <column name=\"isin\" type=\"string\" bytes=\"765\" max_size=\"0\" />\n                <column name=\"is_traded\" type=\"int32\" />\n                <column name=\"emitent_id\" type=\"int32\" />\n                <column name=\"emitent_title\" type=\"string\" bytes=\"765\" max_size=\"0\" />\n                <column name=\"emitent_inn\" type=\"string\" bytes=\"30\" max_size=\"0\" />\n                <column name=\"emitent_okpo\" type=\"string\" bytes=\"24\" max_size=\"0\" />\n                <column name=\"gosreg\" type=\"string\" bytes=\"189\" max_size=\"0\" />\n                <column name=\"type\" type=\"string\" bytes=\"93\" max_size=\"0\" />\n                <column name=\"group\" type=\"string\" bytes=\"93\" max_size=\"0\" />\n                <column name=\"primary_boardid\" type=\"string\" bytes=\"12\" max_size=\"0\" />\n                <column name=\"marketprice_boardid\" type=\"string\" bytes=\"12\" max_size=\"0\" />\n            </columns>\n        </metadata>\n        <rows>\n            <row id=\"413737789\" secid=\"RU000A1032P1\" shortname=\"ВТБРКС01\" regnumber=\"4-01-00586-R\" name=\"ООО «СФО ВТБ РКС-1 »\" isin=\"RU000A1032P1\" is_traded=\"1\" emitent_id=\"1375599\" emitent_title=\"Общество с ограниченной ответственностью &quot;Специализированное финансовое общество ВТБ РКС-1&quot;\" emitent_inn=\"9704018755\" emitent_okpo=\"\" gosreg=\"4-01-00586-R\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414943447\" secid=\"RU000A103YS0\" shortname=\"ВТБ Б1-251\" regnumber=\"4B02-251-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-251\" isin=\"RU000A103YS0\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-251-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414599813\" secid=\"RU000A103Q81\" shortname=\"ВТБ Б1-230\" regnumber=\"4B02-230-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-230\" isin=\"RU000A103Q81\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-230-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"413464403\" secid=\"RU000A1032H8\" shortname=\"ВТБ Б1-205\" regnumber=\"4B02-205-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-205\" isin=\"RU000A1032H8\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-205-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414220969\" secid=\"RU000A103GF4\" shortname=\"ВТБ Б1-229\" regnumber=\"4B02-229-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-229\" isin=\"RU000A103GF4\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-229-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"413807873\" secid=\"RU000A1039K7\" shortname=\"ВТБ Б1-228\" regnumber=\"4B02-228-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-228\" isin=\"RU000A1039K7\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-228-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"413238387\" secid=\"RU000A102XD6\" shortname=\"ВТБ Б1-204\" regnumber=\"4B02-204-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-204\" isin=\"RU000A102XD6\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-204-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"413016537\" secid=\"RU000A102SZ9\" shortname=\"ВТБ Б1-203\" regnumber=\"4B02-203-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-203\" isin=\"RU000A102SZ9\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-203-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"78195\" secid=\"XS0810596832\" shortname=\"VTB Eur\" regnumber=\"\" name=\"VTB Eurasia DAC 9.5\" isin=\"XS0810596832\" is_traded=\"1\" emitent_id=\"266499\" emitent_title=\"ВТБ Евразия ДиЭйСи (VTB Eurasia DAC)\" emitent_inn=\"0000511693\" emitent_okpo=\"\" gosreg=\"\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQOD\" marketprice_boardid=\"TQOD\" />\n            <row id=\"412786381\" secid=\"RU000A102PB6\" shortname=\"ВТБ Б1-34\" regnumber=\"4B023401000B001P\" name=\"Банк ВТБ (ПАО) Б-1-34\" isin=\"RU000A102PB6\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B023401000B001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"413953045\" secid=\"RU000A103BE8\" shortname=\"ВТБ Б1-231\" regnumber=\"4B02-231-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-231\" isin=\"RU000A103BE8\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-231-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"412596361\" secid=\"RU000A102LV3\" shortname=\"ВТБ Б1-32\" regnumber=\"4B023201000B001P\" name=\"Банк ВТБ (ПАО) Б-1-32\" isin=\"RU000A102LV3\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B023201000B001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414705025\" secid=\"RU000A103SC6\" shortname=\"ВТБСУБ1-12\" regnumber=\"4-12-01000-B-001P\" name=\"Банк ВТБ ПАО СУБ-Т1-12\" isin=\"RU000A103SC6\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4-12-01000-B-001P\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"79774\" secid=\"RU000A0JV3Q3\" shortname=\"ВТБ БО-30\" regnumber=\"4B023001000B\" name=\"Банк ВТБ (ПАО) БО-30\" isin=\"RU000A0JV3Q3\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B023001000B\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"26868\" secid=\"RU000A0JU773\" shortname=\"ВТБ БО-43\" regnumber=\"4B024301000B\" name=\"Банк ВТБ (ПАО) БО-43\" isin=\"RU000A0JU773\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B024301000B\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414705023\" secid=\"RU000A103SB8\" shortname=\"ВТБСУБ1-11\" regnumber=\"4-11-01000-B-001P\" name=\"Банк ВТБ ПАО СУБ-Т1-11\" isin=\"RU000A103SB8\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4-11-01000-B-001P\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"413626957\" secid=\"RU000A1034P7\" shortname=\"ВТБСУБТ1-5\" regnumber=\"4-05-01000-B-001P\" name=\"Банк ВТБ ПАО СУБ-Т1-5\" isin=\"RU000A1034P7\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4-05-01000-B-001P\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414963215\" secid=\"RU000A103QE6\" shortname=\"ВТБ Б1-240\" regnumber=\"4B02-240-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-240\" isin=\"RU000A103QE6\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-240-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"412855435\" secid=\"RU000A102QJ7\" shortname=\"ВТБСУБТ1-1\" regnumber=\"4-01-01000-B-001P\" name=\"Банк ВТБ ПАО СУБ-Т1-1\" isin=\"RU000A102QJ7\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4-01-01000-B-001P\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414705017\" secid=\"RU000A103S89\" shortname=\"ВТБСУБ1-8\" regnumber=\"4-08-01000-B-001P\" name=\"Банк ВТБ ПАО СУБ-Т1-8\" isin=\"RU000A103S89\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4-08-01000-B-001P\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414953131\" secid=\"RU000A103ZA5\" shortname=\"ВТБКС4-129\" regnumber=\"4B02-129-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-129\" isin=\"RU000A103ZA5\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-129-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"414844657\" secid=\"RU000A103QC0\" shortname=\"ВТБ Б1-238\" regnumber=\"4B02-238-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-238\" isin=\"RU000A103QC0\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-238-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"415271031\" secid=\"RU000A103XX2\" shortname=\"ВТБ Б1-259\" regnumber=\"4B02-259-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-259\" isin=\"RU000A103XX2\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-259-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414776935\" secid=\"RU000A103UX8\" shortname=\"ВТБКС4-114\" regnumber=\"4B02-114-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-114\" isin=\"RU000A103UX8\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-114-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"415031981\" secid=\"RU000A1040G3\" shortname=\"ВТБКС4-135\" regnumber=\"4B02-135-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-135\" isin=\"RU000A1040G3\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-135-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"414844653\" secid=\"RU000A103166\" shortname=\"ВТБ Б1-216\" regnumber=\"4B02-216-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-216\" isin=\"RU000A103166\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-216-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414801509\" secid=\"RU000A103VC0\" shortname=\"ВТБКС4-116\" regnumber=\"4B02-116-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-116\" isin=\"RU000A103VC0\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-116-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"414878719\" secid=\"RU000A103WU0\" shortname=\"ВТБКС4-123\" regnumber=\"4B02-123-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-123\" isin=\"RU000A103WU0\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-123-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"414929261\" secid=\"RU000A103YJ9\" shortname=\"ВТБКС4-127\" regnumber=\"4B02-127-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-127\" isin=\"RU000A103YJ9\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-127-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"414984923\" secid=\"RU000A103ZM0\" shortname=\"ВТБКС4-131\" regnumber=\"4B02-131-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-131\" isin=\"RU000A103ZM0\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-131-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"414995227\" secid=\"RU000A104008\" shortname=\"ВТБКС4-132\" regnumber=\"4B02-132-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-132\" isin=\"RU000A104008\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-132-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"414813713\" secid=\"RU000A103VV0\" shortname=\"ВТБКС4-117\" regnumber=\"4B02-117-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-117\" isin=\"RU000A103VV0\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-117-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"415018845\" secid=\"RU000A1040A6\" shortname=\"ВТБКС4-134\" regnumber=\"4B02-134-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-134\" isin=\"RU000A1040A6\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-134-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"415258711\" secid=\"RU000A1040X8\" shortname=\"ВТБКС4-137\" regnumber=\"4B02-137-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-137\" isin=\"RU000A1040X8\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-137-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"389819257\" secid=\"RU000A101NX7\" shortname=\"ВТБ Б-1-68\" regnumber=\"4B02-68-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-68\" isin=\"RU000A101NX7\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-68-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414789447\" secid=\"RU000A103V68\" shortname=\"ВТБКС4-115\" regnumber=\"4B02-115-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-115\" isin=\"RU000A103V68\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-115-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"414833369\" secid=\"RU000A103WA2\" shortname=\"ВТБКС4-119\" regnumber=\"4B02-119-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-119\" isin=\"RU000A103WA2\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-119-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"415165795\" secid=\"RU000A1040P4\" shortname=\"ВТБКС4-136\" regnumber=\"4B02-136-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-136\" isin=\"RU000A1040P4\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-136-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"415271035\" secid=\"RU000A104198\" shortname=\"ВТБКС4-138\" regnumber=\"4B02-138-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-138\" isin=\"RU000A104198\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-138-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"414823471\" secid=\"RU000A103W34\" shortname=\"ВТБКС4-118\" regnumber=\"4B02-118-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-118\" isin=\"RU000A103W34\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-118-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"414909991\" secid=\"RU000A103YD2\" shortname=\"ВТБКС4-126\" regnumber=\"4B02-126-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-126\" isin=\"RU000A103YD2\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-126-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"414943449\" secid=\"RU000A103YT8\" shortname=\"ВТБКС4-128\" regnumber=\"4B02-128-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-128\" isin=\"RU000A103YT8\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-128-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"415006131\" secid=\"RU000A104065\" shortname=\"ВТБКС4-133\" regnumber=\"4B02-133-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-133\" isin=\"RU000A104065\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-133-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"414844663\" secid=\"RU000A103WF1\" shortname=\"ВТБКС4-120\" regnumber=\"4B02-120-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-120\" isin=\"RU000A103WF1\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-120-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"414900021\" secid=\"RU000A103XE2\" shortname=\"ВТБКС4-125\" regnumber=\"4B02-125-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-125\" isin=\"RU000A103XE2\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-125-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"415281425\" secid=\"RU000A1041W8\" shortname=\"ВТБКС4-139\" regnumber=\"4B02-139-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-139\" isin=\"RU000A1041W8\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-139-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"415295285\" secid=\"RU000A1042M7\" shortname=\"ВТБКС4-140\" regnumber=\"4B02-140-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-140\" isin=\"RU000A1042M7\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-140-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"415318263\" secid=\"RU000A1043F9\" shortname=\"ВТБКС4-142\" regnumber=\"4B02-142-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-142\" isin=\"RU000A1043F9\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-142-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"414963213\" secid=\"RU000A103QD8\" shortname=\"ВТБ Б1-239\" regnumber=\"4B02-239-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-239\" isin=\"RU000A103QD8\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-239-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414868721\" secid=\"RU000A103WP0\" shortname=\"ВТБКС4-122\" regnumber=\"4B02-122-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-122\" isin=\"RU000A103WP0\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-122-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"415306041\" secid=\"RU000A104339\" shortname=\"ВТБКС4-141\" regnumber=\"4B02-141-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-141\" isin=\"RU000A104339\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-141-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"414855645\" secid=\"RU000A103WJ3\" shortname=\"ВТБКС4-121\" regnumber=\"4B02-121-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-121\" isin=\"RU000A103WJ3\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-121-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"414888799\" secid=\"RU000A103X58\" shortname=\"ВТБКС4-124\" regnumber=\"4B02-124-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-124\" isin=\"RU000A103X58\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-124-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"414705019\" secid=\"RU000A103S97\" shortname=\"ВТБСУБ1-9\" regnumber=\"4-09-01000-B-001P\" name=\"Банк ВТБ ПАО СУБ-Т1-9\" isin=\"RU000A103S97\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4-09-01000-B-001P\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"415271029\" secid=\"RU000A103U02\" shortname=\"ВТБ Б1-245\" regnumber=\"4B02-245-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-245\" isin=\"RU000A103U02\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-245-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414963217\" secid=\"RU000A103ZE7\" shortname=\"ВТБКС4-130\" regnumber=\"4B02-130-01000-B-005P\" name=\"Банк ВТБ ПАО КС-4-130\" isin=\"RU000A103ZE7\" is_traded=\"0\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-130-01000-B-005P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"PSAU\" marketprice_boardid=\"\" />\n            <row id=\"415271033\" secid=\"RU000A103XY0\" shortname=\"ВТБ Б1-260\" regnumber=\"4B02-260-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-260\" isin=\"RU000A103XY0\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-260-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"412110643\" secid=\"RU000A102879\" shortname=\"ВТБСУБТ2-1\" regnumber=\"4-01-01000-B-002P\" name=\"Банк ВТБ ПАО СУБ-Т2-1\" isin=\"RU000A102879\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4-01-01000-B-002P\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414705021\" secid=\"RU000A103SA0\" shortname=\"ВТБСУБ1-10\" regnumber=\"4-10-01000-B-001P\" name=\"Банк ВТБ ПАО СУБ-Т1-10\" isin=\"RU000A103SA0\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4-10-01000-B-001P\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"413533597\" secid=\"RU000A102F02\" shortname=\"ВТБ Б1-171\" regnumber=\"4B02-171-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-171\" isin=\"RU000A102F02\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-171-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"206992501\" secid=\"RU000A101491\" shortname=\"ВТБ Б-1-47\" regnumber=\"4B024701000B001P\" name=\"Банк ВТБ (ПАО) Б-1-47\" isin=\"RU000A101491\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B024701000B001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"414844655\" secid=\"RU000A103QB2\" shortname=\"ВТБ Б1-237\" regnumber=\"4B02-237-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-237\" isin=\"RU000A103QB2\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-237-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"271347883\" secid=\"RU000A101F52\" shortname=\"ВТБ Б-1-51\" regnumber=\"4B025101000B001P\" name=\"Банк ВТБ (ПАО) Б-1-51\" isin=\"RU000A101F52\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B025101000B001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"400699639\" secid=\"RU000A101PR4\" shortname=\"ВТБ Б-1-70\" regnumber=\"4B02-70-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-70\" isin=\"RU000A101PR4\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-70-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411666901\" secid=\"RU000A101XW8\" shortname=\"ВТБ Б1-100\" regnumber=\"4B02-100-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-100\" isin=\"RU000A101XW8\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-100-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411807317\" secid=\"RU000A101Y26\" shortname=\"ВТБ Б1-105\" regnumber=\"4B02-105-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-105\" isin=\"RU000A101Y26\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-105-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411174119\" secid=\"RU000A101PW4\" shortname=\"ВТБ Б-1-72\" regnumber=\"4B02-72-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-72\" isin=\"RU000A101PW4\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-72-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411457393\" secid=\"RU000A101TJ3\" shortname=\"ВТБ Б-1-84\" regnumber=\"4B02-84-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-84\" isin=\"RU000A101TJ3\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-84-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"412320469\" secid=\"RU000A102762\" shortname=\"ВТБ Б1-136\" regnumber=\"4B02-136-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-136\" isin=\"RU000A102762\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-136-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"412408305\" secid=\"RU000A1027T3\" shortname=\"ВТБ Б1-148\" regnumber=\"4B02-148-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-148\" isin=\"RU000A1027T3\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-148-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411174121\" secid=\"RU000A101PX2\" shortname=\"ВТБ Б-1-73\" regnumber=\"4B02-73-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-73\" isin=\"RU000A101PX2\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-73-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411540609\" secid=\"RU000A101V78\" shortname=\"ВТБ Б-1-88\" regnumber=\"4B02-88-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-88\" isin=\"RU000A101V78\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-88-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411846353\" secid=\"RU000A101Y59\" shortname=\"ВТБ Б1-108\" regnumber=\"4B02-108-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-108\" isin=\"RU000A101Y59\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-108-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411933835\" secid=\"RU000A0NH1X5\" shortname=\"ВТБ Б1-111\" regnumber=\"4B02-111-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-111\" isin=\"RU000A0NH1X5\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-111-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411979107\" secid=\"RU000A0NH1Y3\" shortname=\"ВТБ Б1-112\" regnumber=\"4B02-112-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-112\" isin=\"RU000A0NH1Y3\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-112-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"412102539\" secid=\"RU000A0NH236\" shortname=\"ВТБ Б1-117\" regnumber=\"4B02-117-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-117\" isin=\"RU000A0NH236\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-117-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"412271973\" secid=\"RU000A0NH251\" shortname=\"ВТБ Б1-119\" regnumber=\"4B02-119-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-119\" isin=\"RU000A0NH251\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-119-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"413626953\" secid=\"RU000A0NNED6\" shortname=\"ВТБ Б1-191\" regnumber=\"4B02-191-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-191\" isin=\"RU000A0NNED6\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-191-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"413722179\" secid=\"RU000A0NNEE4\" shortname=\"ВТБ Б1-192\" regnumber=\"4B02-192-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-192\" isin=\"RU000A0NNEE4\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-192-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"206992509\" secid=\"RU000A1014J2\" shortname=\"ВТБ Т2-3\" regnumber=\"40901000B\" name=\"Банк ВТБ ПАО Т2-3\" isin=\"RU000A1014J2\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"40901000B\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"320005649\" secid=\"RU000A101KC7\" shortname=\"ВТБ Б-1-60\" regnumber=\"4B026001000B001P\" name=\"Банк ВТБ (ПАО) Б-1-60\" isin=\"RU000A101KC7\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B026001000B001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"376706217\" secid=\"RU000A101MW1\" shortname=\"ВТБ Б-1-66\" regnumber=\"4B02-66-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-66\" isin=\"RU000A101MW1\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-66-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"376706219\" secid=\"RU000A101MY7\" shortname=\"ВТБ Б-1-67\" regnumber=\"4B02-67-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-67\" isin=\"RU000A101MY7\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-67-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411540611\" secid=\"RU000A101V86\" shortname=\"ВТБ Б-1-89\" regnumber=\"4B02-89-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-89\" isin=\"RU000A101V86\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-89-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411625035\" secid=\"RU000A101VA8\" shortname=\"ВТБ Б-1-91\" regnumber=\"4B02-91-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-91\" isin=\"RU000A101VA8\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-91-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411762665\" secid=\"RU000A101XZ1\" shortname=\"ВТБ Б1-103\" regnumber=\"4B02-103-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-103\" isin=\"RU000A101XZ1\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-103-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411846355\" secid=\"RU000A101Y67\" shortname=\"ВТБ Б1-109\" regnumber=\"4B02-109-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-109\" isin=\"RU000A101Y67\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-109-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"413626959\" secid=\"RU000A1034Q5\" shortname=\"ВТБСУБТ1-6\" regnumber=\"4-06-01000-B-001P\" name=\"Банк ВТБ ПАО СУБ-Т1-6\" isin=\"RU000A1034Q5\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4-06-01000-B-001P\" type=\"corporate_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"412018421\" secid=\"RU000A0NH293\" shortname=\"ВТБ Б1-123\" regnumber=\"4B02-123-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-123\" isin=\"RU000A0NH293\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-123-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"412146673\" secid=\"RU000A0NH2A1\" shortname=\"ВТБ Б1-124\" regnumber=\"4B02-124-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-124\" isin=\"RU000A0NH2A1\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-124-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"412184819\" secid=\"RU000A0NH2C7\" shortname=\"ВТБ Б1-126\" regnumber=\"4B02-126-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-126\" isin=\"RU000A0NH2C7\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-126-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"353804403\" secid=\"RU000A101LL6\" shortname=\"ВТБ Б-1-61\" regnumber=\"4B026101000B001P\" name=\"Банк ВТБ (ПАО) Б-1-61\" isin=\"RU000A101LL6\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B026101000B001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411235001\" secid=\"RU000A101S57\" shortname=\"ВТБ Б-1-74\" regnumber=\"4B02-74-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-74\" isin=\"RU000A101S57\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-74-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411457387\" secid=\"RU000A101SJ5\" shortname=\"ВТБ Б-1-78\" regnumber=\"4B02-78-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-78\" isin=\"RU000A101SJ5\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-78-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411348321\" secid=\"RU000A101SK3\" shortname=\"ВТБ Б-1-76\" regnumber=\"4B02-76-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-76\" isin=\"RU000A101SK3\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-76-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411407179\" secid=\"RU000A101SP2\" shortname=\"ВТБ Б-1-80\" regnumber=\"4B02-80-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-80\" isin=\"RU000A101SP2\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-80-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411666899\" secid=\"RU000A101VD2\" shortname=\"ВТБ Б-1-94\" regnumber=\"4B02-94-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-94\" isin=\"RU000A101VD2\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-94-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"411715465\" secid=\"RU000A101VE0\" shortname=\"ВТБ Б-1-95\" regnumber=\"4B02-95-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-95\" isin=\"RU000A101VE0\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-95-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"412234937\" secid=\"RU000A102739\" shortname=\"ВТБ Б1-133\" regnumber=\"4B02-133-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-133\" isin=\"RU000A102739\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-133-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n            <row id=\"412365593\" secid=\"RU000A1027G0\" shortname=\"ВТБ Б1-138\" regnumber=\"4B02-138-01000-B-001P\" name=\"Банк ВТБ (ПАО) Б-1-138\" isin=\"RU000A1027G0\" is_traded=\"1\" emitent_id=\"1200\" emitent_title=\"Банк ВТБ (публичное акционерное общество)\" emitent_inn=\"7702070139\" emitent_okpo=\"00032520\" gosreg=\"4B02-138-01000-B-001P\" type=\"exchange_bond\" group=\"stock_bonds\" primary_boardid=\"TQCB\" marketprice_boardid=\"TQCB\" />\n        </rows>\n    </data>\n</document>"
+				}
+			]
+		},
+		{
 			"name": "Спецификация инструмента",
 			"id": "cb167eb9-7010-4c28-9973-5ec5eb905a56",
 			"protocolProfileBehavior": {
