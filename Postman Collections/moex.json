@@ -1356,7 +1356,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://iss.moex.com/iss/securities.json?q=ВТБ&group_by=group&group_by_filter=stock_bonds&limit=10000&iss.meta=off&start=0&iss.json=extended",
+					"raw": "https://iss.moex.com/iss/securities.json?q=ВТБ&group_by=group&group_by_filter=futures&limit=10000&iss.meta=off&start=0&iss.json=extended",
 					"protocol": "https",
 					"host": [
 						"iss",
@@ -1405,7 +1405,7 @@
 						},
 						{
 							"key": "group_by_filter",
-							"value": "stock_bonds",
+							"value": "futures",
 							"description": "stock_bonds  corporate_bond common_share"
 						},
 						{
@@ -1432,8 +1432,7 @@
 						},
 						{
 							"key": "iss.json",
-							"value": "extended",
-							"type": "text"
+							"value": "extended"
 						}
 					]
 				},
